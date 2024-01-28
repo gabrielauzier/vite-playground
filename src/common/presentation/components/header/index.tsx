@@ -1,5 +1,5 @@
 import { Profile } from './profile'
-import { Search } from './search'
+import { SearchBoxImpl } from './search-box'
 import { TeamsCombobox } from './teams-combobox'
 
 export function Header() {
@@ -9,7 +9,7 @@ export function Header() {
         <TeamsCombobox />
 
         <div className="flex items-center gap-2">
-          <Search />
+          <SearchBoxImpl />
           <Profile />
         </div>
       </div>
