@@ -34,7 +34,7 @@ export function Heading({
   return (
     <Tag
       className={classNames(
-        'text-gray-100 leading-snug',
+        'text-zinc-700 dark:text-zinc-100 leading-snug font-bold',
         HeadingSize[size],
         className,
       )}

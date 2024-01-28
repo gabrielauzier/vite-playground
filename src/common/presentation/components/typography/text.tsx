@@ -37,7 +37,11 @@ export function Text({
 
   return (
     <Tag
-      className={classNames('text-gray-100', `text-${size}`, className)}
+      className={classNames(
+        'text-zinc-500 dark:text-zinc-100',
+        `text-${size}`,
+        className,
+      )}
       {...rest}
     >
       {children}
