@@ -24,6 +24,7 @@ export interface TextProps extends ComponentProps<'p'> {
   children?: ReactNode
   size?: TextSize
   as?: TypographyHtmlTags
+  stronger?: boolean
 }
 
 export function Text({
@@ -31,6 +32,7 @@ export function Text({
   className,
   size = 'md',
   as = 'p',
+  stronger = false,
   ...rest
 }: TextProps) {
   const Tag: any = as
@@ -40,6 +42,7 @@ export function Text({
       className={classNames(
         'text-zinc-500 dark:text-zinc-100',
         `text-${size}`,
+        stronger && 'text-zinc-800',
         className,
       )}
       {...rest}
