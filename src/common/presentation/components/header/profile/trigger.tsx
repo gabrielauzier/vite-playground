@@ -1,7 +1,7 @@
 import { User } from 'phosphor-react'
 import { cn } from '@/common/lib/shadcn-ui/utils'
 
-export function Profile() {
+export function ProfileTrigger() {
   return (
     <div
       className={cn(
