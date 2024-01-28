@@ -1,15 +1,13 @@
 import './common/styles/global.css'
 
-import { Text, Heading, Button } from './common/presentation/components'
+import { RootLayout } from './common/presentation/layouts/root-layout'
+import { Sidebar } from './common/presentation/components/sidebar'
 
 function App() {
   return (
-    <body className="dark:bg-zinc-900 min-h-screen ">
-      <Button variant="default">Hello</Button>
-      <Heading as="h1">Theres no country for old man</Heading>
-      <Text>Hello Main New</Text>
-      <Text>Hello Main New</Text>
-    </body>
+    <RootLayout>
+      <Sidebar></Sidebar>
+    </RootLayout>
   )
 }
 
