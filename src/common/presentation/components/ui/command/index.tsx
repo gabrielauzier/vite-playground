@@ -7,4 +7,13 @@ import { CommandList as List } from './list'
 import { CommandSeparator as Separator } from './separator'
 import { CommandShortcut as Shortcut } from './shorcut'
 
-export { Root, Input, List, Empty, Group, Item, Shortcut, Separator }
+export const Command = {
+  Root,
+  Input,
+  List,
+  Empty,
+  Group,
+  Item,
+  Shortcut,
+  Separator,
+}
