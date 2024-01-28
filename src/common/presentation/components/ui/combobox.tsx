@@ -2,15 +2,15 @@ import * as React from 'react'
 import { Check, ChevronsUpDown } from 'lucide-react'
 import { Popover, PopoverContent, PopoverTrigger } from './popover'
 import { Button, Text } from '..'
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-} from './command'
+import * as Command from './command'
 import { cn } from '@/common/lib/shadcn-ui/utils'
-
+// {
+//   Command.,
+//   Command.Empty,
+//   Command.Group,
+//   Command.Input,
+//   Command.Item,
+// }
 interface ComboxboxProps {
   labels: {
     value: string
@@ -29,27 +29,28 @@ export function Combobox({ labels: frameworks }: ComboxboxProps) {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[320px] justify-between"
+          className="w-sidebar justify-between"
         >
           <div className="flex gap-4">
             <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-5 h-5 rounded-full"></div>
-            <Text>
+            <Text stronger>
               {value
                 ? frameworks.find((framework) => framework.value === value)
                     ?.label
-                : 'Select framework...'}
+                : 'Select a team...'}
             </Text>
           </div>
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[320px] p-0">
-        <Command>
-          <CommandInput placeholder="Search framework..." />
-          <CommandEmpty>No framework found.</CommandEmpty>
-          <CommandGroup>
+
+      <PopoverContent className="w-sidebar p-0">
+        <Command.Root>
+          <Command.Input placeholder="Search framework..." />
+          <Command.Empty>No framework found.</Command.Empty>
+          <Command.Group>
             {frameworks.map((framework) => (
-              <CommandItem
+              <Command.Item
                 key={framework.value}
                 value={framework.value}
                 onSelect={(currentValue) => {
@@ -64,10 +65,10 @@ export function Combobox({ labels: frameworks }: ComboxboxProps) {
                   )}
                 />
                 {framework.label}
-              </CommandItem>
+              </Command.Item>
             ))}
-          </CommandGroup>
-        </Command>
+          </Command.Group>
+        </Command.Root>
       </PopoverContent>
     </Popover>
   )
