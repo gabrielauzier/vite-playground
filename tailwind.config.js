@@ -17,6 +17,12 @@ module.exports = {
       },
     },
     extend: {
+      width: {
+        sidebar: '20rem',
+      },
+      maxWidth: {
+        sidebar: '20rem',
+      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
