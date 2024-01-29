@@ -18,10 +18,10 @@ module.exports = {
     },
     extend: {
       width: {
-        sidebar: '20rem',
+        sidebar: '18rem',
       },
       maxWidth: {
-        sidebar: '20rem',
+        sidebar: '18rem',
       },
       keyframes: {
         'accordion-down': {

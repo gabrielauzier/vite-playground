@@ -1,12 +1,12 @@
 import './common/styles/global.css'
 
 import { RootLayout } from './common/presentation/layouts/root-layout'
-import { Sidebar } from './common/presentation/components/sidebar'
+import { CompaniesLayout } from './companies/presentation/layouts'
 
 function App() {
   return (
     <RootLayout>
-      <Sidebar></Sidebar>
+      <CompaniesLayout></CompaniesLayout>
     </RootLayout>
   )
 }
