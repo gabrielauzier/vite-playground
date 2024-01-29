@@ -1,5 +1,5 @@
 import { Heading, Stack } from '@/common/presentation/components'
-import { CompaniesTabs } from '../components/tabs'
+import { CompaniesTabs } from './tabs'
 
 export function CompaniesLayout() {
   return (
