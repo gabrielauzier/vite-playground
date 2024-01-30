@@ -15,11 +15,9 @@ export function OverviewCard({
   icon,
 }: OverviewCardProps) {
   return (
-    <Card.Root className="shadow-md">
-      <Card.Header className="pb-4 flex-row items-center justify-between">
-        <Card.Title className="tracking-tight text-sm font-medium">
-          {title}
-        </Card.Title>
+    <Card.Root>
+      <Card.Header>
+        <Card.Title>{title}</Card.Title>
         <div className="text-zinc-400">{icon}</div>
       </Card.Header>
       <Card.Content>
