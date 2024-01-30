@@ -6,9 +6,9 @@ export function CompaniesLayout() {
     <Stack>
       <Heading size="lg">Companies</Heading>
 
-      <Stack>
+      <div className="mt-2">
         <CompaniesTabs />
-      </Stack>
+      </div>
     </Stack>
   )
 }

@@ -1,4 +1,4 @@
-import { Stack, Tabs } from '@/common/presentation/components'
+import { Tabs } from '@/common/presentation/components'
 import { Overview } from '../pages/overview'
 
 export function CompaniesTabs() {
@@ -11,14 +11,14 @@ export function CompaniesTabs() {
         <Tabs.Trigger value="notifications">Notifications</Tabs.Trigger>
       </Tabs.List>
 
-      <Stack className="mt-2">
+      <div className="mt-4">
         <Tabs.Content value="overview">
           <Overview />
         </Tabs.Content>
         <Tabs.Content value="analytics">Analytics</Tabs.Content>
         <Tabs.Content value="reports">Reports</Tabs.Content>
         <Tabs.Content value="notifications">Notifications</Tabs.Content>
-      </Stack>
+      </div>
     </Tabs.Root>
   )
 }
